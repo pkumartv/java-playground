@@ -1,15 +1,16 @@
 package corejava.interviews.simple;
 
+import java.util.Iterator;
+
 public class AllocationTest {
 
-	
 	public static String reverse(String str) {
-		  if (str.length() <= 1) {
-		    return str;
-		  }
-		  return reverse(str.substring(1)) + str.charAt(0);   
+		if (str.length() <= 1) {
+			return str;
 		}
-	
+		return reverse(str.substring(1)) + str.charAt(0);
+	}
+
 	public static void main(String[] args) {
 		String s=null;;
 		//s.isEmpty();
@@ -58,17 +59,7 @@ public class AllocationTest {
 		//Now let's add
 		x.toUpperCase();
 		System.out.println("x = " + x); // the output is still:
-		
-		//
-//		temp = new ArrayList<String>();
-		iterator ii=temp.iterator();
-		while(ii.hasNext()){
-		temp.add("TEST");
-			System.out.println(ii.next());
-
-		        }
-		
-		
 	}
+		
 
 }

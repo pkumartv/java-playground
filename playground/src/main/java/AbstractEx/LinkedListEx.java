@@ -1,4 +1,4 @@
-package AbstractEx;
+package abstractex;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
