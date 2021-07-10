@@ -1,4 +1,4 @@
-package AbstractEx;
+package abstractex;
 
 public class AbstractEx extends AbstractClass {
 

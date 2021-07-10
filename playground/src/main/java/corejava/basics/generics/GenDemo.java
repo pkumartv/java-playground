@@ -37,7 +37,7 @@ public class GenDemo {
 		System.out.println(ok);
 		
 		Integer x=5,y=7;
-		x.com
+		
 
 	}
 
