@@ -8,25 +8,36 @@ public class Test {
 		return ((x%2)!=0);
 	}
 
+	static void objectTest(){
+		String test= "StringTest";
+		Object obj=test;
+
+		if("StringTest".equals(obj))
+		 System.out.println("Hello");
+		 else
+		 System.out.println("No Hello");
+	}
+
 	
 	public static void main(String[] args) {
+		objectTest();
 		
-		boolean x=isOdd(-127);
-		System.out.println(x);
-		Integer a = 100, b =100;
-		Integer c = 1000, d = 1000;
-		System.out.println(a == b);
-		System.out.println(c ==d);
-		char [] xx =null;
-		doSomething(xx);
+		// boolean x=isOdd(-127);
+		// System.out.println(x);
+		// Integer a = 100, b =100;
+		// Integer c = 1000, d = 1000;
+		// System.out.println(a == b);
+		// System.out.println(c ==d);
+		// char [] xx =null;
+		// doSomething(xx);
 		
-		Integer no=null;
-		doSomething(no);
+		// Integer no=null;
+		// doSomething(no);
 		
-		Object obj=null;
-				doSomething(obj);
+		// Object obj=null;
+		// 		doSomething(obj);
 				
-				doSomething((Integer)null);
+		// 		doSomething((Integer)null);
 	}
 	
 	
