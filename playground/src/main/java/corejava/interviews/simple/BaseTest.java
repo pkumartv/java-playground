@@ -23,10 +23,10 @@ class Derived extends Base {
 }
 
 public class BaseTest {
-	public static void main(String args[]) {
+	public static void main(String ...args) {
 		Base obj = new Derived();
-		obj.display();
+		//obj.display();
 		obj.print();
-		
+
 	}
 }

@@ -1,6 +1,6 @@
 package java8.CompletableFuture;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+//import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
@@ -27,13 +27,13 @@ public class CompletableFutureTest {
     public static void main(String[] args) {
 
         // Future<String> oldFuture= new Future<String>() {
-            
+
         // };
         Future<String> completableFuture = calculateAsync();
 
         // With an known result
         Future<String> knownResultFuture = CompletableFuture.completedFuture("Hello");
-        
+
         String answer = "FAILED";
         try {
             answer = completableFuture.get();
@@ -82,11 +82,12 @@ public class CompletableFutureTest {
         // but don't need to pass any resulting value down a Future chain.
         // The thenAcceptBoth method is there to help:
 
-        CompletableFuture future = CompletableFuture.supplyAsync(() -> "Hello").then
+        CompletableFuture future = CompletableFuture.supplyAsync(() -> "Hello")
+            //.then
                 .thenAcceptBoth(CompletableFuture.supplyAsync(() -> " World"), (s1, s2) -> System.out.println(s1 + s2));
 
 
-               // CompletableFuture.supplyAsync(supplier, executor)
+               //CompletableFuture.supplyAsync(supplier, executor);
 
     }
 
