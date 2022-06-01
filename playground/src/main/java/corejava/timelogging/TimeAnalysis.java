@@ -14,7 +14,7 @@ public class TimeAnalysis
 
         //System.out.println(clock.offset(clock, offsetDuration));
         try {
-            Thread.sleep(60000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
