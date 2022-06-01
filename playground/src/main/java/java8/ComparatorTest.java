@@ -34,7 +34,7 @@ public class ComparatorTest {
             // TODO Auto-generated method stub
             return this.getName();
         }
-        
+
     }
     public static void main(String[] args) {
 
@@ -61,11 +61,11 @@ public class ComparatorTest {
         Comparator<User> byName= Comparator.comparing(User::getName);
         users.sort(byName);
 
-        
+
         System.out.println("sorting by Name"+users);
 
         //users.sort(naturalOrder());
-        
+
         List<Integer> intList= new ArrayList(){
             {
                 add(1);
@@ -74,13 +74,13 @@ public class ComparatorTest {
                 add(4);
                 add(-1);
             }
-            
+
         };
         Comparator<Integer> comparator4= (i1,i2) ->Integer.compare(i1, i2);
         Comparator<Integer> simplifiedComparator= Integer::compare;
         Comparator<Integer> naturalOrder = Comparator.naturalOrder();
-        Comparator<Integer> naturalOrderNullsOrder= Comparator.nullsLast(naturalOrder());
-        Comparator<Integer> naturalOrderNullsFirst= Comparator.nullsLast(naturalOrder());
+        Comparator<Integer> naturalOrderNullsOrder= Comparator.nullsLast(Comparator.naturalOrder());
+        Comparator<Integer> naturalOrderNullsFirst= Comparator.nullsLast(Comparator.naturalOrder());
 
 
         //List.of(1,2,3,4,5,5,6,7,9,-1);
@@ -90,7 +90,7 @@ public class ComparatorTest {
 
 
 
-       
+
 
     }
     // private static Comparator<? super User> naturalOrder() {

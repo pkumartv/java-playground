@@ -1,6 +1,6 @@
 package corejava.basics.threads.async;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
@@ -11,17 +11,17 @@ public class AsyncTest {
 
     public static Future<String> calculateAsync() throws InterruptedException {
         CompletableFuture<String> completableFuture = new CompletableFuture<>();
-    
+
         Executors.newCachedThreadPool().submit(() -> {
             Thread.sleep(500);
             completableFuture.complete("Hello");
             return null;
         });
-    
+
         return completableFuture;
     }
 
-    
+
     public static void main(String[] args) {
         Future<String> completableFuture=null;
         try {
@@ -31,7 +31,7 @@ public class AsyncTest {
             e1.printStackTrace();
         }
 
-// ... 
+// ...
 
 String result="";
 try {
@@ -42,7 +42,7 @@ try {
 }
 //assertEquals("Hello", result);
 System.out.println(result);
-        
+
     }
-    
+
 }

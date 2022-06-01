@@ -1,21 +1,21 @@
 package corejava.basics;
 
 public class ObjectTest {
-	
-	
+
+
 	@Override
 	public boolean equals(Object arg0) {
 		// TODO Auto-generated method stub
 		return super.equals(arg0);
 	}
 
-	@Override
-	protected void finalize() throws Throwable {
-		// TODO Auto-generated method stub
-		super.finalize();
-		System.out.println("ObjectTest finalize");
-	}
-
+//	@Override
+//	protected void finalize() throws Throwable {
+//		// TODO Auto-generated method stub
+//		super.finalize();
+//		System.out.println("ObjectTest finalize");
+//	}
+//
 
 	@Override
 	public int hashCode() {
@@ -37,7 +37,7 @@ public class ObjectTest {
 		// TODO Auto-generated constructor stub
 		System.out.println("ObjectTest Constructor");
 	}
-	
-	
+
+
 
 }
