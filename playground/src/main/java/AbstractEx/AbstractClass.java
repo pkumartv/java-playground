@@ -1,4 +1,4 @@
-package abstractex;
+package AbstractEx;
 
 public abstract  class AbstractClass {
 	//abstract void print();
