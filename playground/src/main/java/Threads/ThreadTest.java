@@ -18,6 +18,12 @@ public class ThreadTest {
 		myThread.run();
 		System.out.println(Thread.currentThread().getName());
 		System.out.println(Thread.currentThread().getId());
+
+		System.gc();
+		Runtime.getRuntime().freeMemory();
+
+
+
 		
 
 	}
