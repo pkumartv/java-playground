@@ -27,7 +27,12 @@ public class SingletonTextEx {
 		return singleton;
 	}
 	
-	
+
+	//Better implementation would be 
+	// Although the Singleton pattern was introduced by GoF,
+	// the original implementation is known to be problematic in multithreaded scenarios.
+    // So here, we're going to follow a more optimal approach that makes use of a static inner class:
+	//Check SingletoneBetter class
 	
 
 
