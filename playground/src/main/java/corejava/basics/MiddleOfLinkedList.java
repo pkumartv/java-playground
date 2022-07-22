@@ -32,46 +32,65 @@ class ListNode {
 
 public class MiddleOfLinkedList {
 
-    public static final Logger LOG= Logger.getLogger("MiddleOfLinkedList");
+    public static final Logger LOG = Logger.getLogger("MiddleOfLinkedList");
+    private ListNode head;
 
     /*
      * Brute Force method
      */
     public static int getMiddleNode(ListNode head) {
         /*
-         * Navigate through the entire list 
-         * get the length 
-         * find the middle odd/env navigate again to
+         * Navigate through the entire list get the length find the middle odd/env navigate again to
          * the middle node Space O(1) Time O(N+M)
          */
         int length = getLengthOfLinkedList(head);
-        LOG.info("Length of linkedlist is : "+length);
+        LOG.info("Length of linkedlist is : " + length);
         int lengthOfMiddleNode;
-        if(length % 2 == 0){
-            lengthOfMiddleNode= length/2;
+        if (length % 2 == 0) {
+            lengthOfMiddleNode = length / 2;
+        } else
+            lengthOfMiddleNode = length / 2;
+
+        LOG.info("Middle node is at " + lengthOfMiddleNode);
+        ListNode current = head;
+        for (int i = 0; i < lengthOfMiddleNode; i++, current = current.next) {
+
         }
-        else
-            lengthOfMiddleNode= length/2;
-
-        LOG.info("Middle node is at "+ lengthOfMiddleNode);
-        ListNode current=head;
-        for(int i=0; i < lengthOfMiddleNode ; i++, current=current.next ){
-
-        }
-        
-
         return current.value;
     }
 
     private static int getLengthOfLinkedList(ListNode head) {
-        int length=0;
-        ListNode current=head;
-        do{
+        int length = 0;
+        ListNode current = head;
+        do {
             ++length;
-            current=current.next;
-        } while(current!=null);
+            current = current.next;
+        } while (current != null);
 
         return length;
+    }
+
+    /*
+     * Optimized approach using fast/slow pointer. One iteration using fast/slow pointers. Time
+     * complexity # The above algorithm will have a time complexity of O(N) where ‘N’ is the
+     * number of nodes in the LinkedList.
+     * 
+     * Space complexity # The algorithm runs in constant space O(1).
+     */
+
+    public static int getMiddleNodeBetterApproach(ListNode head) {
+        ListNode slow = head;
+        ListNode fast = head;
+
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        return slow.value;
+
+
+
     }
 
     public static void main(String[] args) {
@@ -80,9 +99,10 @@ public class MiddleOfLinkedList {
         head.next.next = new ListNode(3);
         head.next.next.next = new ListNode(4);
         head.next.next.next.next = new ListNode(5);
-        head.next.next.next.next.next = new ListNode(6);
+        // head.next.next.next.next.next = new ListNode(6);
 
         LOG.info("Middle Node is : " + getMiddleNode(head));
+        LOG.info("Better Approach:: Middle Node is : " + getMiddleNodeBetterApproach(head));
 
 
 
